@@ -3,5 +3,20 @@ module.exports = {
     title: `ewhanhan`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
-}
+  plugins: [
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: 'Roboto',
+              variants: ['300', '400', '500'],
+            },
+          ],
+        },
+      },
+    },
+  ],
+};

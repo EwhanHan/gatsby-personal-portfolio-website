@@ -12,11 +12,20 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {
+    "framer-motion": "^6.3.0",
     "gatsby": "^4.12.1",
+    "gatsby-plugin-sass": "^5.12.1",
+    "gatsby-plugin-webfonts": "^2.2.2",
+    "normalize.css": "^8.0.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "sass": "^1.50.1"
+  },
+  "devDependencies": {
+    "prettier": "2.6.2"
   }
 }
