@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
-
-import Backdrop from '../backdrop/backdrop';
-import closeButton from '../../assets/images/close-btn.6857a554.svg';
+import Sidebar from '../sidebar/sidebar';
 import Navlinks from './navlinks';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [activeSidebar, setActiveSidebar] = useState(false);
@@ -31,27 +29,10 @@ const Navbar = () => {
   if (windowWidth < 1200) {
     if (activeSidebar) {
       navigationComponent = (
-        <>
-          <Backdrop isBackdropClicked={isBackdropClicked}>
-            <div className='sidebar__nav__links'>
-              <button className='close__btn' onClick={toggleSidebar}>
-                <img src={closeButton} alt='close' />
-              </button>
-              <Link className='nav-link' to='#about'>
-                About Me
-              </Link>
-              <Link className='nav-link' to='#about'>
-                Resume
-              </Link>
-              <Link className='nav-link' to='#about'>
-                Project
-              </Link>
-              <Link className='nav-link' to='#about'>
-                Contact
-              </Link>
-            </div>
-          </Backdrop>
-        </>
+        <Sidebar
+          toggleSidebar={toggleSidebar}
+          isBackdropClicked={isBackdropClicked}
+        />
       );
     }
     if (!activeSidebar) {
@@ -68,12 +49,13 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='navbar'>
-      <div className='navbar-logo'>
-        <Link to='/'>EWHAN HAN.</Link>
-      </div>
-      {navigationComponent}
-    </nav>
+    <motion.header
+      animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, x: '-100vw' }}
+      transition={{ duration: 1 }}
+    >
+      <nav className='navbar'>{navigationComponent}</nav>
+    </motion.header>
   );
 };
 

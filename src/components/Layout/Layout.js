@@ -6,12 +6,10 @@ import '../../assets/scss/main.scss';
 
 const Layout = props => {
   return (
-    <>
-      <header>
-        <Navbar />
-      </header>
-      <main className='main_content'>{props.children}</main>
-    </>
+    <div className='layout'>
+      <Navbar />
+      <main className='main__content'>{props.children}</main>
+    </div>
   );
 };
 

@@ -4,8 +4,9 @@
 $--clr-text-white: #fff;
 $--clr-text-black: black;
 $--clr-text-hover: #0050ff;
+$--clr-background-main: #fefbf5;
 
-$width-navbar: 72.5rem;
+$width-navbar: 62.5rem;
 $height-navbar: 6.25rem;
 
 *,
@@ -44,8 +45,8 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 1.5rem;
   height: $height-navbar;
+  background-color: transparent;
 }
 
 .sidebar__nav__links {
@@ -61,7 +62,8 @@ body {
   right: 0px;
   margin-left: auto;
   gap: 1rem;
-  .nav-link {
+  z-index: 1000;
+  .nav__link {
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
@@ -89,9 +91,8 @@ body {
   }
 }
 
-.navbar-logo {
+.navbar__logo {
   position: relative;
-  text-transform: uppercase;
   font-weight: 900;
   font-size: 2rem;
   a {
@@ -112,7 +113,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 38rem;
-  .nav-link {
+  .nav__link {
     color: $--clr-text-black;
     text-transform: capitalize;
     font-size: 1.25rem;
@@ -139,6 +140,8 @@ body {
 
 .sidebar__burger {
   display: flex;
+  margin-left: auto;
+  margin-right: 2rem;
   flex-direction: column;
   justify-content: space-around;
   width: 2rem;
@@ -146,7 +149,6 @@ body {
   background: transparent;
   border: none;
   cursor: pointer;
-
   div {
     width: 2rem;
     height: 0.3em;
@@ -159,6 +161,7 @@ body {
 
 .backdrop {
   position: fixed;
+  display: block;
   top: 0px;
   bottom: 0px;
   right: 0px;
@@ -166,19 +169,36 @@ body {
   height: 100vh;
   transition: all 0.3s ease-in-out 0s;
   transform: translateX(0px);
-  display: block;
-  z-index: 100;
+  z-index: 10;
+}
+
+.main__content {
+  padding: 0 1rem;
 }
 
 .hero {
-  min-height: calc(100vh - #{$height-navbar});
+  display: flex;
+  margin: 0 auto;
+  max-width: 62.5rem;
 }
 
 .hero__content {
-  height: 100%;
   display: flex;
   width: 100%;
-  justify-content: start;
+}
+
+.landing {
+  width: 100%;
+  height: calc(100vh - #{$height-navbar});
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.text__highlight {
+  // box-shadow: rgb(205, 243, 225) 0px -2rem 0px inset;
+  box-shadow: rgb(205 243 225) 0px -0.5rem 0px inset;
 }
 
 .title {
@@ -194,19 +214,73 @@ body {
     font-weight: 700;
   }
 
-  h2{
+  h2 {
     font-size: 2rem;
   }
 
-  .text__highlight {
-    box-shadow: rgb(205, 243, 225) 0px -2rem 0px inset;
-  }
 
   .description {
     text-align: justify;
     font-size: 1.125rem;
-    margin-bottom: 2rem;
     overflow-wrap: break-word;
     word-wrap: break-word;
   }
+}
+
+.social-links {
+  display: flex;
+  align-content: flex-start;
+  justify-content: space-around;
+  margin-right: auto;
+  gap: 2rem;
+}
+
+.social-link {
+  padding: 1rem;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+
+  text-decoration: none;
+  color: black;
+}
+
+.layout {
+  background-color: $--clr-background-main;
+  width: 100%;
+  height: 100%;
+}
+
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about__heading {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+justify-content: center;
+  text-align: justify;
+  h3 {
+    width: 100%;
+    margin: 2rem 0;
+    font-weight: 700;
+    font-size: 1.75rem;
+  }
+
+  // p {
+  //   max-width: calc(100% - 18rem);
+  // }
+}
+
+.profile-pic {
+  border-radius: 0.5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  overflow: hidden;
+  max-width: 18rem;
 }
