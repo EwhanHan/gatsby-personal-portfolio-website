@@ -12,7 +12,7 @@ const navDetails = [
     text: 'About Me',
   },
   {
-    id: 'about',
+    id: 'resume',
     text: 'Resume',
   },
   {

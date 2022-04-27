@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Sidebar from '../sidebar/sidebar';
 import Navlinks from './navlinks';
 import { motion } from 'framer-motion';
@@ -8,6 +8,7 @@ const Navbar = () => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   const toggleSidebar = () => {
+    // document.body.style.overflow.toggle('hidden');
     setActiveSidebar(!activeSidebar);
   };
 
