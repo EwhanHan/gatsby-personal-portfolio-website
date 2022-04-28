@@ -3,7 +3,7 @@ import StyleWrapper from '../stylewrapper/stylewrapper';
 import ResumePDF from '../../assets/downloads/Ewhan_Han_Resume_New_Grad_2022_v2.pdf';
 import { FaDownload } from 'react-icons/fa';
 
-const resume = () => {
+const Resume = () => {
   return (
     <StyleWrapper>
       <div id='resume' className='resume'>
@@ -16,4 +16,4 @@ const resume = () => {
   );
 };
 
-export default resume;
+export default Resume;

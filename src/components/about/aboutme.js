@@ -2,7 +2,7 @@ import * as React from 'react';
 import StyleWrapper from '../stylewrapper/stylewrapper';
 import { StaticImage } from 'gatsby-plugin-image';
 
-const aboutme = () => {
+const AboutMe = () => {
   return (
     <StyleWrapper>
       <div className='about' id='about'>
@@ -36,4 +36,4 @@ const aboutme = () => {
   );
 };
 
-export default aboutme;
+export default AboutMe;

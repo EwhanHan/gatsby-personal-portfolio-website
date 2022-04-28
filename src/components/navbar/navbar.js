@@ -1,19 +1,17 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useCallback } from 'react';
 import Sidebar from '../sidebar/sidebar';
 import Navlinks from './navlinks';
 import { motion } from 'framer-motion';
 
+import { UserContext } from '../../utils/context/usercontext';
+
 const Navbar = () => {
-  const [activeSidebar, setActiveSidebar] = useState(false);
+  const { isSidebarActive, showSidebar, hideSidebar } = useContext(UserContext);
+
   const [windowWidth, setWindowWidth] = useState(0);
 
-  const toggleSidebar = () => {
-    // document.body.style.overflow.toggle('hidden');
-    setActiveSidebar(!activeSidebar);
-  };
-
   const isBackdropClicked = () => {
-    setActiveSidebar(false);
+    hideSidebar();
   };
 
   useEffect(() => {
@@ -28,17 +26,17 @@ const Navbar = () => {
 
   let navigationComponent;
   if (windowWidth < 1200) {
-    if (activeSidebar) {
+    if (isSidebarActive) {
       navigationComponent = (
         <Sidebar
-          toggleSidebar={toggleSidebar}
           isBackdropClicked={isBackdropClicked}
+          hideSidebar={hideSidebar}
         />
       );
     }
-    if (!activeSidebar) {
+    if (!isSidebarActive) {
       navigationComponent = (
-        <button className='sidebar__burger' onClick={toggleSidebar}>
+        <button className='sidebar__burger' onClick={showSidebar}>
           <div />
           <div />
           <div />

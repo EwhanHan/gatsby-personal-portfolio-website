@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import { navDetails } from '../../assets/constants/constants';
 
-const navlinks = () => {
+const Navlinks = () => {
   return (
     <>
       <div className='navbar__logo'>
@@ -21,4 +21,4 @@ const navlinks = () => {
   );
 };
 
-export default navlinks;
+export default Navlinks;

@@ -1,15 +1,15 @@
-import * as React from 'react';
+import React, { useContext } from 'react';
 import closeButton from '../../assets/images/close-btn.svg';
 import { Link } from 'gatsby';
 import Backdrop from '../backdrop/backdrop';
 import { navDetails } from '../../assets/constants/constants';
 
-const sidebar = props => {
+const Sidebar = props => {
   return (
     <>
       <Backdrop isBackdropClicked={props.isBackdropClicked}>
         <div className='sidebar__nav__links'>
-          <button className='close__btn' onClick={props.toggleSidebar}>
+          <button className='close__btn' onClick={props.hideSidebar}>
             <img src={closeButton} alt='close' />
           </button>
           {navDetails.map((nav, index) => {
@@ -25,4 +25,4 @@ const sidebar = props => {
   );
 };
 
-export default sidebar;
+export default Sidebar;

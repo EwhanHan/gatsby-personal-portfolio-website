@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const backdrop = ({ children, isBackdropClicked }) => {
+const Backdrop = ({ children, isBackdropClicked }) => {
   return (
     <div className='backdrop' onClick={isBackdropClicked}>
       {children}
@@ -8,4 +8,4 @@ const backdrop = ({ children, isBackdropClicked }) => {
   );
 };
 
-export default backdrop;
+export default Backdrop;
