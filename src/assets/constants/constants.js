@@ -16,10 +16,6 @@ const navDetails = [
     text: 'Resume',
   },
   {
-    id: 'projects',
-    text: 'Projects',
-  },
-  {
     id: 'contact',
     text: 'Contact',
   },
@@ -28,7 +24,8 @@ const navDetails = [
 const hero = {
   title: 'Hello!',
   subtitle: "I'm Ewhan Han",
-  description: 'and new Software Engineering graduate based in London, Ontario!',
+  description:
+    'and new Software Engineering graduate based in London, Ontario!',
 };
 
 const socials = [

@@ -2,6 +2,8 @@ import * as React from 'react';
 import StyleWrapper from '../stylewrapper/stylewrapper';
 import { StaticImage } from 'gatsby-plugin-image';
 
+import Highlight from '../highlighter/highlighter';
+
 const AboutMe = () => {
   return (
     <StyleWrapper>
@@ -18,11 +20,9 @@ const AboutMe = () => {
             <p>
               I am currently a student at Western University and set to graduate
               with a Bachelor's of Engineering Science in{' '}
-              <span className='text__highlight'>Software Engineering</span>. I
-              am also finishing my long-term internship with IBM and now{' '}
-              <span className='text__highlight'>
-                actively seeking a full-time
-              </span>{' '}
+              <Highlight type='primary'>Software Engineering</Highlight>. I am
+              also finishing my long-term internship with IBM and now{' '}
+              <Highlight type='primary'>actively seeking a full-time</Highlight>{' '}
               position to start my career!
             </p>
             <p>

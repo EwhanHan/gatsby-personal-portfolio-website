@@ -87,9 +87,12 @@ body {
 /* Basic */
 /*#######*/
 
-.text__highlight {
-  // box-shadow: rgb(205, 243, 225) 0px -2rem 0px inset;
+.text__highlight__primary {
   box-shadow: $--shadow-highlight-text-primary;
+}
+
+.text__highlight__secondary {
+  box-shadow: $--shadow-highlight-text-secondary;
 }
 
 /*########*/

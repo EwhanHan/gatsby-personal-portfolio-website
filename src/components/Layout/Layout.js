@@ -3,7 +3,7 @@ import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
 import '../../assets/scss/main.scss';
 import { UserContext } from '../../utils/context/usercontext';
-import {Helmet} from "react-helmet";
+import { Helmet } from 'react-helmet';
 
 const Layout = props => {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
