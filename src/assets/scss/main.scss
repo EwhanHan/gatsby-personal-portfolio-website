@@ -21,6 +21,7 @@ $--border-radius-secondary: 0.25rem;
 
 /* Transition */
 $--transition-1: 0.3s ease-in-out all;
+$--transition-box-shadow: box-shadow 0.3s ease-in-out;
 
 @mixin button {
   text-decoration: none;
@@ -74,6 +75,8 @@ h3 {
 
 a {
   text-decoration: none;
+  color: $--clr-text-black;
+  cursor: pointer;
 }
 
 body {
@@ -89,6 +92,10 @@ body {
 
 .text__highlight__primary {
   box-shadow: $--shadow-highlight-text-primary;
+  transition: $--transition-box-shadow;
+  &:hover {
+    box-shadow: $--shadow-highlight-text-secondary;
+  }
 }
 
 .text__highlight__secondary {
@@ -113,10 +120,6 @@ body {
   position: relative;
   font-weight: 900;
   font-size: 2rem;
-  a {
-    color: $--clr-text-black;
-    cursor: pointer;
-  }
 }
 
 @media (min-width: 992px) {
@@ -439,4 +442,57 @@ footer {
 
 .blur {
   overflow: hidden;
+}
+
+/*#########*/
+/* Contact */
+/*#########*/
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.social-links__contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-link__contact {
+  padding: 1rem;
+  border-radius: $--border-radius-primary;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  width: min-content;
+  height: 3rem;
+  text-decoration: none;
+  color: black;
+  background-color: transparent;
+  transition: $--transition-1;
+  &:hover {
+    color: $--clr-text-white;
+    background-color: black;
+  }
+}
+
+.contact__profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-pic {
+  margin-top: 2rem;
+  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
 }

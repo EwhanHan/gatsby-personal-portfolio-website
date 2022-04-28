@@ -12,7 +12,7 @@ const landing = () => {
     <StyleWrapper>
       <div className='landing'>
         <div className='title'>
-          <h1>👋 {HERO_CONSTANTS.title}</h1>
+          <h1>{HERO_CONSTANTS.title}</h1>
           <h2>{HERO_CONSTANTS.subtitle}</h2>
           <h3>
             A <Highlight type='secondary'>Frontend Developer</Highlight>
