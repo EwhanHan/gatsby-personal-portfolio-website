@@ -3,7 +3,7 @@
 /* Colours */
 $--clr-text-white: #fff;
 $--clr-text-black: black;
-$--clr-text-hover: #0050ff;
+$--clr-text-hover: #cdf3e1;
 $--clr-bg-main: white;
 
 /* Dimensions */
@@ -12,8 +12,8 @@ $max-width-navbar: 62.5rem;
 $fixed-height-navbar: 6.25rem;
 
 /* Box shadows */
-$--shadow-highlight-text-primary: rgb(205 243 225) 0px -0.5rem 0px inset;
-$--shadow-highlight-text-secondary: rgb(205, 243, 225) 0px -2rem 0px inset;
+$--shadow-highlight-text-primary: $--clr-text-hover 0px -0.5rem 0px inset;
+$--shadow-highlight-text-secondary: $--clr-text-hover 0px -2rem 0px inset;
 
 /* Border-radius */
 $--border-radius-primary: 1rem;
@@ -187,11 +187,9 @@ body {
   height: 100vh;
   width: min(60vw, 616px);
   padding: 2rem;
-  position: relative;
   right: 0px;
   margin-left: auto;
   gap: 1rem;
-  z-index: 1000;
   .nav__link {
     display: flex;
     justify-content: center;
@@ -201,10 +199,15 @@ body {
     padding: 1rem 0;
     color: $--clr-text-black;
     width: clamp(10rem, 20vw, 15rem);
+    padding: 1.5rem 0;
+    border-radius: $--border-radius-primary;
     &:nth-of-type(1) {
-      padding: 1.5rem 0;
-      border-radius: $--border-radius-primary;
       border: 0.125rem solid $--clr-text-black;
+    }
+
+    &:hover {
+      color: $--clr-text-white;
+      background-color: black;
     }
   }
 
