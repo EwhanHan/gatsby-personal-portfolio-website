@@ -312,6 +312,13 @@ body {
     font-size: 1.125rem;
     overflow-wrap: break-word;
     word-wrap: break-word;
+    max-width: 65%;
+  }
+}
+
+@media (min-width: 992px) {
+  .description {
+    max-width: 50% !important;
   }
 }
 
