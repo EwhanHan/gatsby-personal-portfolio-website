@@ -3,6 +3,7 @@ import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
 import '../../assets/scss/main.scss';
 import { UserContext } from '../../utils/context/usercontext';
+import {Helmet} from "react-helmet";
 
 const Layout = props => {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
@@ -24,6 +25,9 @@ const Layout = props => {
       }}
     >
       <div className='layout'>
+        <Helmet
+          bodyAttributes={{ class: isSidebarActive ? 'blur' : undefined }}
+        />
         <Navbar />
         <main className='main__content'>{props.children}</main>
         <Footer />
