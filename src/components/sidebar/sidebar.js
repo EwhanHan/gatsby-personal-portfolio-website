@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import closeButton from '../../assets/images/close-btn.svg';
 import { Link } from 'gatsby';
 import Backdrop from '../backdrop/backdrop';

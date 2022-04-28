@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useCallback } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Sidebar from '../sidebar/sidebar';
 import Navlinks from './navlinks';
 import { motion } from 'framer-motion';
@@ -7,7 +7,6 @@ import { UserContext } from '../../utils/context/usercontext';
 
 const Navbar = () => {
   const { isSidebarActive, showSidebar, hideSidebar } = useContext(UserContext);
-
   const [windowWidth, setWindowWidth] = useState(0);
 
   const isBackdropClicked = () => {
