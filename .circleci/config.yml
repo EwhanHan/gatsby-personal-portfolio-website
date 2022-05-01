@@ -16,7 +16,7 @@ jobs:
           command: "npm install"
       - run:
           name: "Building app"
-          command: "npm run deploy"
+          command: "echo $(pwd) && echo $(ls) && npm run deploy"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
