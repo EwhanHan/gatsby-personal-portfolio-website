@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <footer>
       <div className='footer'>
-        <p>© Ewhan Han 2022</p>
+        <p>© Ewhan Han {new Date().getFullYear()} :)</p>
       </div>
     </footer>
   );

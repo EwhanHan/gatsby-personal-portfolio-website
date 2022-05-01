@@ -14,11 +14,12 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,scss}\"",
-    "deploy": "gatsby build && gh-pages -d public -b gh-pages"
+    "deploy": "gatsby build && gh-pages -d public -b gh-pages -m \"Automated [ci skip]\""
   },
   "dependencies": {
     "framer-motion": "^6.3.0",
     "gatsby": "^4.12.1",
+    "gatsby-plugin-cname": "^1.0.0",
     "gatsby-plugin-image": "^2.12.1",
     "gatsby-plugin-react-helmet": "^5.13.0",
     "gatsby-plugin-sass": "^5.12.1",

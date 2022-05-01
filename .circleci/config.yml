@@ -1,0 +1,32 @@
+version: 2.1
+
+jobs:
+  deploy:
+    docker:
+      - image: node:17.2.0
+
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - 'df:2e:6c:66:7b:92:ee:c4:e0:fb:a9:67:0d:cd:6e:b6'
+      - run:
+          name: 'Installing dependency'
+          command: 'npm install'
+      - run:
+          name: 'Setup github'
+          command: |
+            git config --global user.email "ewhan.han@gmail.com"
+            git config --global user.name "Ewhan Han"
+      - run:
+          name: 'Building app'
+          command: 'npm run deploy'
+
+workflows:
+  deploy-workflow:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only:
+                - main

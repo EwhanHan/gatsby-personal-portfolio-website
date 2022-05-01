@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `ewhanhan`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://ewhanhan.com`,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -22,5 +22,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-cname`,
   ],
 };
