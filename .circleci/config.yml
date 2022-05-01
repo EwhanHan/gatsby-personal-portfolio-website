@@ -11,10 +11,10 @@ jobs:
     
     steps:
       - checkout
-      - install:
+      - run:
           name: "Installing depedency"
           command: "npm install"
-      - build:
+      - run:
           name: "Building app"
           command: "npm run deploy"
 
