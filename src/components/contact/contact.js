@@ -7,6 +7,8 @@ import {
 import Highlight from '../highlighter/highlighter';
 import { StaticImage } from 'gatsby-plugin-image';
 
+
+// test
 const Contact = () => {
   return (
     <StyleWrapper>
