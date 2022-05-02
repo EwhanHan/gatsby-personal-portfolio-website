@@ -11,12 +11,20 @@ jobs:
     
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "df:2e:6c:66:7b:92:ee:c4:e0:fb:a9:67:0d:cd:6e:b6"
       - run:
           name: "Installing depedency"
           command: "npm install"
       - run:
+          name: "Setup github"
+          command: |
+            git config --global user.email "ewhan.han@gmail.com"
+            git config --global user.name "Ewhan Han"
+      - run:
           name: "Building app"
-          command: "echo $(pwd) && echo $(ls) && npm run deploy"
+          command: "npm run deploy"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
