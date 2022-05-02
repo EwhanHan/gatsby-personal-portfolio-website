@@ -32,7 +32,7 @@ const Contact = () => {
         </div>
         <div className='social-links__contact'>
           {socials.map((social, index) => {
-            if (index == socials.length - 1) return;
+            if (index === socials.length - 1) return;
             return (
               <a
                 key={index}

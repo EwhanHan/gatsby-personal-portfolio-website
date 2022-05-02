@@ -26,7 +26,7 @@ const hero = {
   title: '👋 Hello!',
   subtitle: "I'm Ewhan Han",
   description:
-    'and new Software Engineering graduate based in London, Ontario!',
+    '📍 and new Software Engineering graduate based in London, Ontario!',
 };
 
 const socials = [
