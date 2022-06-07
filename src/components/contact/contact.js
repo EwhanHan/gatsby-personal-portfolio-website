@@ -16,7 +16,7 @@ const Contact = () => {
         <div className='contact__profile'>
           <StaticImage
             className='contact-pic'
-            src='../../assets/images/profile-pic.jpeg'
+            src='../../assets/images/profile-pic-2.jpeg'
             placeholder='blurred'
             alt='cool-guy'
           />
