@@ -27,7 +27,10 @@ const Layout = props => {
       <div className='layout'>
         <Helmet
           bodyAttributes={{ class: isSidebarActive ? 'blur' : undefined }}
-        />
+        >
+          <title>Ewhan Han</title>
+          <meta name='description' content='Welcome to my personal website!' />
+        </Helmet>
         <Navbar />
         <main className='main__content'>{props.children}</main>
         <Footer />
