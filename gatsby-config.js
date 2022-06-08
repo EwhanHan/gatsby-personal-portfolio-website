@@ -25,5 +25,17 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-cname`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ewhan Han Personal Website`,
+        short_name: `Ewhan Han`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/assets/images/favicon.ico`,
+      },
+    },
   ],
 };
